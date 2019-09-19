@@ -5,15 +5,14 @@ export const Wrapper = styled.div`
   height: 100%;
   background: linear-gradient(#22202c, #402845);
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
 `;
 
 export const Content = styled.div`
   width: 100%;
-  max-width: 315px;
+  max-width: 900px;
   text-align: center;
-
   form {
     display: flex;
     flex-direction: column;

@@ -17,7 +17,7 @@ export default function Header() {
     <HeaderContainer>
       <div>
         <nav>
-          <Link to="dashboard">
+          <Link to="/dashboard">
             <img src={logo} alt="" />
           </Link>
         </nav>

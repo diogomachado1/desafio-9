@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { darken } from 'polished';
 
 export const Container = styled.div`
   width: 100%;
@@ -19,24 +18,6 @@ export const Container = styled.div`
     > span {
       font-size: 32px;
       font-weight: bold;
-    }
-    a > button {
-      padding: 5px 15px;
-      display: flex;
-      align-items: center;
-      background: #f94d6a;
-      font-weight: bold;
-      color: #fff;
-      border: 0;
-      border-radius: 4px;
-      font-size: 16px;
-      transition: background 0.2s;
-      > *:first-child {
-        margin-right: 10px;
-      }
-      &:hover {
-        background: ${darken(0.08, '#f94d6a')};
-      }
     }
   }
 `;
@@ -58,7 +39,7 @@ export const MeetupList = styled.ul`
       }
       > span:nth-child(2) {
         margin-right: 20px;
-        color: #fffa;
+        color: #fff7;
       }
     }
   }

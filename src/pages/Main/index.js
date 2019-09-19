@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 
 import { Container, MeetupList } from './styles';
 import { meetupsRequest } from '~/store/modules/meetup/actions';
+import { Button } from '~/Components/Button';
 
 export default function Main() {
   const dispatch = useDispatch();
@@ -18,18 +19,15 @@ export default function Main() {
     initFetch();
   }, [initFetch]);
 
-  useEffect(() => {
-    console.tron.log(meetups);
-  }, [meetups]);
   return (
     <Container>
       <div>
         <span>Meus meetups</span>
         <Link to="/meetup/create">
-          <button type="button">
+          <Button type="button">
             <MdAddCircleOutline size="20" />
             Novo Meetup
-          </button>
+          </Button>
         </Link>
       </div>
       <MeetupList>

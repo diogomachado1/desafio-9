@@ -7,6 +7,13 @@ export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  > div {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 export const Content = styled.div`
@@ -18,7 +25,8 @@ export const Content = styled.div`
     flex-direction: column;
     margin-top: 30px;
 
-    input {
+    input,
+    textarea {
       background: rgba(0, 0, 0, 0.1);
       border: 0;
       border-radius: 4px;
@@ -26,7 +34,7 @@ export const Content = styled.div`
       padding: 0 15px;
       color: #fff;
       margin: 0 0 10px;
-
+      width: 100%;
       &::placeholder {
         color: rgba(255, 255, 255, 0.7);
       }
@@ -39,7 +47,7 @@ export const Content = styled.div`
       font-weight: bold;
     }
 
-    button {
+    > button {
       margin: 5px 0 0;
       height: 44px;
       background: #f94d6a;

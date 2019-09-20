@@ -1,5 +1,5 @@
 {
-  "name": "modulo07",
+  "name": "desafio-09",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -12,8 +12,10 @@
     "polished": "^3.4.1",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
+    "react-datepicker": "^2.9.6",
     "react-dom": "^16.8.6",
     "react-icons": "^3.7.0",
+    "react-perfect-scrollbar": "^1.5.3",
     "react-redux": "^7.1.0",
     "react-router-dom": "^5.0.1",
     "react-scripts": "3.0.1",
@@ -46,6 +48,7 @@
     ]
   },
   "devDependencies": {
+    "@types/react": "^16.9.2",
     "babel-eslint": "10.0.1",
     "babel-plugin-root-import": "^6.4.1",
     "eslint": "^5.16.0",

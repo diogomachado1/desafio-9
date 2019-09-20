@@ -23,7 +23,7 @@ export default function Header() {
         </nav>
         <Profile>
           <span>{profile.name}</span>
-          <Link to="/perfil">Meu Perfil</Link>
+          <Link to="/profile">Meu Perfil</Link>
         </Profile>
         <button type="button" onClick={handleSignOut}>
           Sair

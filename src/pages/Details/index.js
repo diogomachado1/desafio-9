@@ -34,7 +34,7 @@ export default function Details(props) {
     <Container>
       <div>
         <span>{meetup.title}</span>
-        <Link to="/meetup/create">
+        <Link to={`/meetup/edit/${meetup.id}`}>
           <Button color="#4DBAF9" type="button">
             <MdEdit size="20" />
             Editar

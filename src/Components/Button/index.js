@@ -18,7 +18,7 @@ export const Button = styled.button`
   &:hover {
     background: ${({ color }) => darken(0.08, color || '#f94d6a')};
   }
-  @media only screen and (max-width: 450px) {
+  @media only screen and (max-width: 600px) {
     > svg {
       margin-right: 0;
     }

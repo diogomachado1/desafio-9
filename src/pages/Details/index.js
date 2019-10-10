@@ -37,12 +37,12 @@ export default function Details(props) {
         <Link to={`/meetup/edit/${meetup.id}`}>
           <Button color="#4DBAF9" type="button">
             <MdEdit size="20" />
-            Editar
+            <span>Editar</span>
           </Button>
         </Link>
         <Button onClick={cancelMeetup} type="button">
           <MdDeleteForever size="20" />
-          Cancelar
+          <span>Cancelar</span>
         </Button>
       </div>
       <Content>

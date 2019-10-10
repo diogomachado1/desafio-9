@@ -14,10 +14,15 @@ export const Container = styled.div`
       margin: 50px 0;
     }
     display: flex;
+    text-align: start;
+    align-items: center;
     > span {
       font-size: 32px;
       font-weight: bold;
       margin-right: auto;
+    }
+    > a {
+      margin-left: 10px;
     }
     > button {
       margin-left: 15px;
@@ -38,11 +43,14 @@ export const Content = styled.div`
   > div {
     display: flex;
     width: 100%;
+    flex-wrap: wrap;
     > span {
       display: flex;
-      align-items: flex-end;
       color: #fff7;
       margin-right: 25px;
+      > svg {
+        flex-shrink: 0;
+      }
       > span {
         margin-left: 5px;
         font-size: 16px;

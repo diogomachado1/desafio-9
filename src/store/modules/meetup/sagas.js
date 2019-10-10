@@ -8,7 +8,7 @@ import formatDate from '~/util/formatDate';
 
 export function* getMeetups() {
   try {
-    const response = yield call(api.get, 'organizing');
+    const response = yield call(api.get, 'meetup');
     response.data.map(item => {
       item.formatDate = formatDate(item.date);
       return item;

@@ -12,10 +12,18 @@ export const Button = styled.button`
   border-radius: 4px;
   font-size: 16px;
   transition: background 0.2s;
-  > *:first-child {
+  > svg {
     margin-right: 10px;
   }
   &:hover {
     background: ${({ color }) => darken(0.08, color || '#f94d6a')};
+  }
+  @media only screen and (max-width: 450px) {
+    > svg {
+      margin-right: 0;
+    }
+    > span {
+      display: none;
+    }
   }
 `;

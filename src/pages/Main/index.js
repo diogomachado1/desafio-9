@@ -26,7 +26,7 @@ export default function Main() {
         <Link to="/meetup/create">
           <Button type="button">
             <MdAddCircleOutline size="20" />
-            Novo Meetup
+            <span>Novo Meetup</span>
           </Button>
         </Link>
       </div>
@@ -34,8 +34,10 @@ export default function Main() {
         {meetups.map(meetup => (
           <li key={meetup.id}>
             <Link to={`/details/${meetup.id}`}>
-              <span>{meetup.title}</span>
-              <span>{meetup.formatDate}</span>
+              <span>
+                <span>{meetup.title}</span>
+                <span>{meetup.formatDate}</span>
+              </span>
               <MdChevronRight size="30" />
             </Link>
           </li>

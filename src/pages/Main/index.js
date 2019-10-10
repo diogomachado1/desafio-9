@@ -1,19 +1,19 @@
-import React, { useEffect, useCallback } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import React, { useEffect, useCallback, useState } from 'react';
 import { MdAddCircleOutline, MdChevronRight } from 'react-icons/md';
 import { Link } from 'react-router-dom';
 
 import { Container, MeetupList } from './styles';
-import { meetupsRequest } from '~/store/modules/meetup/actions';
 import { Button } from '~/Components/Button';
+import api from '~/services/api';
+import formatDate from '~/util/formatDate';
 
 export default function Main() {
-  const dispatch = useDispatch();
-  const meetups = useSelector(state => state.meetup.meetups);
+  const [meetups, setMeetups] = useState([]);
 
-  const initFetch = useCallback(() => {
-    dispatch(meetupsRequest());
-  }, [dispatch]);
+  const initFetch = useCallback(async () => {
+    const response = await api.get(`/meetup`);
+    setMeetups(response.data);
+  }, []);
 
   useEffect(() => {
     initFetch();
@@ -36,7 +36,7 @@ export default function Main() {
             <Link to={`/details/${meetup.id}`}>
               <span>
                 <span>{meetup.title}</span>
-                <span>{meetup.formatDate}</span>
+                <span>{formatDate(meetup.date)}</span>
               </span>
               <MdChevronRight size="30" />
             </Link>

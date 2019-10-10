@@ -8,7 +8,6 @@ export default function TextInput({ name, ...rest }) {
   const [value, setValue] = useState(defaultValue);
 
   useEffect(() => {
-    console.tron.log('test', defaultValue);
     setValue(defaultValue);
   }, [defaultValue]);
 

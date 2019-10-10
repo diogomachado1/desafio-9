@@ -43,7 +43,6 @@ export default function Meetup(props) {
       }
       history.push('/dashboard');
     } catch (error) {
-      console.tron.log(error);
       toast.error(`Error na ${meetup ? 'criação' : 'edição'} do Meetup`);
     }
   }

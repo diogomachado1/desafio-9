@@ -15,7 +15,6 @@ export function* getMeetups() {
     });
     yield put(meetupsSuccess(response.data));
   } catch (err) {
-    console.tron.log(err);
     toast.error('Erro ao carregar a lista de Meetups!');
     yield put(meetupsFailure());
   }
